@@ -8,66 +8,78 @@
     <title>English Cards - Главная</title>
 </head>
     <body>
-        <header class="header">
-    <nav class="header-navigation">
-        <a href="index.html" class="header-navigation__logo-block logo-block logo-link">
-            <img src="img/Logo.svg" alt="Logo" class="logo-block__logo">
-            <p class="logo-block__logo-typography">
-                English Cards
-            </p>
-        </a>
-        <ul class="header-navigation__header-links header-links">
-            <li class="header-links__header-link header-link">
-                <a href="#about" class="header-link__link link">
-                    О нас
-                </a>
-            </li>
-            <li class="header-links__header-link header-link">
-                <a href="#dict" class="header-link__link link">
-                    Словарь
-                </a>
-            </li>
-            <li class="header-links__header-link header-link">
-                <a href="#test" class="header-link__link link">
-                    Тестирование
-                </a>
-            </li>
-        </ul>
-        <div class="header-navigation__buttons-block buttons-block">
-            <button class="buttons-block__button button" id="auth-button">
-                <span class="button-span">
-                    Войти
-                </span>
-            </button>
-            <button class="buttons-block__button button" id="registr-button">
-                <span class="button-span">
-                    Регистрация
-                </span>
-            </button>
-        </div>
-    </nav>
-    <div class="header-main">
-        <h1 class="header-main__title header-title">
-            Поможем выучить английские слова быстро и доступно
-        </h1>
-        <div class="header-main__search-block search-block">
-            <div class="search-block__search-bar header-search">
-                <input type="text" class="search-block__search-input header-input" id="search-input" placeholder="введите интересующее слово...">
-                <button class="search-block__search-button search-button">
-                    <!-- Search svg-icon -->
+        <!-- Modal -->
+        <div class="wrapper container">
+            <header class="header">
+    <div class="header-border">
+        <nav class="header-navigation">
+            <a href="index.html" class="header-navigation__logo-block logo-block logo-link">
+                <img src="img/Logo.svg" alt="Logo" class="logo-block__logo">
+                <p class="logo-block__logo-typography">
+                    English Cards
+                </p>
+            </a>
+            <ul class="header-navigation__header-links header-links">
+                <li class="header-links__header-link header-link">
+                    <a href="#about" class="header-link__link link">
+                        О нас
+                    </a>
+                </li>
+                <li class="header-links__header-link header-link">
+                    <a href="#dict" class="header-link__link link">
+                        Словарь
+                    </a>
+                </li>
+                <li class="header-links__header-link header-link">
+                    <a href="#test" class="header-link__link link">
+                        Тестирование
+                    </a>
+                </li>
+            </ul>
+            <div class="header-navigation__buttons-block buttons-block">
+                <button class="buttons-block__button button" id="auth-button">
+                    <span class="button-span">
+                        Войти
+                    </span>
+                </button>
+                <button class="buttons-block__button button" id="registr-button">
+                    <span class="button-span">
+                        Регистрация
+                    </span>
                 </button>
             </div>
-            <a href="#" class="search-block__random-link link" id="random-link">
-                <!-- Random svg-icon -->
-                Случайное слово
-            </a>
+            <button class="header-navigation__burger-button burger-button">
+                <span class="burger-button__span"></span>
+            </button>
+        </nav>
+        <div class="header-main">
+            <h1 class="header-main__title header-title">
+                Поможем выучить английские слова быстро и доступно
+            </h1>
+            <div class="header-main__search-block search-block">
+                <div class="search-block__search-bar header-search">
+                    <input type="text" class="search-block__search-input header-input" id="search-input" placeholder="введите интересующее слово...">
+                    <button class="search-block__search-button search-button">
+                        <svg>
+                            <use xlink:href="img/icons/icons.svg#Search"></use>
+                        </svg>
+                    </button>
+                </div>
+                <a href="#" class="search-block__random-link link" id="random-link">
+                    <svg>
+                        <use xlink:href="img/icons/icons.svg#Random"></use>
+                    </svg>
+                    Случайное слово
+                </a>
+            </div>
         </div>
     </div>
 </header>
-        
-        <footer class="footer">
+            
+            <footer class="footer">
     
 </footer> 
+        </div>
         <script src="js/app.min.js"></script>
     </body>
 </html>
