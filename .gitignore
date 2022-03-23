@@ -396,3 +396,9 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+gulpfile.js
+package.json
+gulp
+source
+package-lock.json
