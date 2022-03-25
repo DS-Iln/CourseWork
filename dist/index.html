@@ -49,7 +49,7 @@
                     <div class="modal__agreement-block">
                         <input type="checkbox" id="agreement" class="modal__agreement-input" name="checkbox">
                         <label for="agreement" class="modal__agreement-label">
-                            Согласен c <a href="https://useragreement.tiiny.site/" class="modal__agreement-link">условиями пользования</a> и <a href="https://useragreement.tiiny.site/" class="modal__agreement-link">политикой конфиденциальности</a>
+                            Я соглашаюсь c <a href="https://useragreement.tiiny.site/" target="_blank" class="modal__agreement-link">условиями пользования</a><span>и</span><a href="https://useragreement.tiiny.site/" target="_blank" class="modal__agreement-link">политикой конфиденциальности</a>
                         </label>
                     </div>
                     <input type="submit" class="modal__button button" id="submit-button" value="Зарегистрироваться">
@@ -73,12 +73,18 @@
                     </div>
                 </div>
                 <form action="" method="post" class="modal__form" id="authorization-form">
-                    <input type="email" class="modal__form-input" name="email" id="email-input" placeholder="Введите электронный адрес...">
-                    <input type="password" class="modal__form-input" name="password" id="password-input" placeholder="Введите пароль...">
+                    <label class="modal__form-label">
+                        Email
+                        <input type="email" class="modal__form-input" name="email" id="email-input" placeholder="Введите электронный адрес...">
+                    </label>
+                    <label class="modal__form-label">
+                        Пароль
+                        <input type="password" class="modal__form-input" name="password" id="password-input" placeholder="Введите пароль...">
+                    </label>
                     <div class="modal__agreement-block">
                         <input type="checkbox" id="entering" class="modal__agreement-input" name="checkbox">
-                        <label for="entering" class="modal__agreement-label">
-                            Запомнить вход
+                        <label for="entering" class="modal__agreement-label entering-label">
+                            <span>Запомнить вход</span>
                         </label>
                     </div>
                     <input type="submit" class="modal__button button" id="submit-button" value="Войти">
