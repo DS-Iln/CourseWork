@@ -9,6 +9,84 @@
 </head>
     <body>
         
+        <section class="modal-window">
+    <div class="modal-background">
+        <div class="modal-inner">
+            <div class="modal-window__body modal modal-registration">
+                <div class="modal__controls-block controls-block">
+                    <div class="controls-block__titles modal-titles">
+                        <h1 class="modal-titles__title modal-title">
+                            Создание нового аккаунта
+                        </h1>
+                        <button class="modal-titles__button titles-button" id="close-modal"></button>
+                    </div>
+                    <div class="controls-block__hint-block hint-block">
+                        <p class="hint-block__hint">
+                            Есть аккаунт?
+                        </p>
+                        <a href="#" class="hint-block__link" id="hint-auth">
+                            Войти
+                        </a>
+                    </div>
+                </div>
+                <form action="" method="post" class="modal__form" id="registration-form">
+                    <label class="modal__form-label">
+                        Фамилия
+                        <input type="text" class="modal__form-input" name="surname" id="surname-input" placeholder="Введите фамилию...">
+                    </label>
+                    <label class="modal__form-label">
+                        Имя
+                        <input type="text" class="modal__form-input" name="name" id="name-input" placeholder="Введите имя...">
+                    </label>
+                    <label class="modal__form-label">
+                        Email
+                        <input type="email" class="modal__form-input" name="email" id="email-input" placeholder="Введите электронный адрес...">
+                    </label>
+                    <label class="modal__form-label">
+                        Пароль
+                        <input type="password" class="modal__form-input" name="password" id="password-input" placeholder="Введите пароль...">
+                    </label>
+                    <div class="modal__agreement-block">
+                        <input type="checkbox" id="agreement" class="modal__agreement-input" name="checkbox">
+                        <label for="agreement" class="modal__agreement-label">
+                            Согласен c <a href="https://useragreement.tiiny.site/" class="modal__agreement-link">условиями пользования</a> и <a href="https://useragreement.tiiny.site/" class="modal__agreement-link">политикой конфиденциальности</a>
+                        </label>
+                    </div>
+                    <input type="submit" class="modal__button button" id="submit-button" value="Зарегистрироваться">
+                </form>
+            </div>
+            <div class="modal-window__body modal modal-authorization">
+                <div class="modal__controls-block controls-block">
+                    <div class="controls-block__titles modal-titles">
+                        <h1 class="modal-titles__title modal-title">
+                            Авторизация
+                        </h1>
+                        <button class="modal-titles__button titles-button" id="close-modal"></button>
+                    </div>
+                    <div class="controls-block__hint-block hint-block">
+                        <p class="hint-block__hint">
+                            Нет аккаунта?
+                        </p>
+                        <a href="#" class="hint-block__link" id="hint-registr">
+                            Зарегистрироваться
+                        </a>
+                    </div>
+                </div>
+                <form action="" method="post" class="modal__form" id="authorization-form">
+                    <input type="email" class="modal__form-input" name="email" id="email-input" placeholder="Введите электронный адрес...">
+                    <input type="password" class="modal__form-input" name="password" id="password-input" placeholder="Введите пароль...">
+                    <div class="modal__agreement-block">
+                        <input type="checkbox" id="entering" class="modal__agreement-input" name="checkbox">
+                        <label for="entering" class="modal__agreement-label">
+                            Запомнить вход
+                        </label>
+                    </div>
+                    <input type="submit" class="modal__button button" id="submit-button" value="Войти">
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
         <div class="wrapper container">
             <header class="header">
                 <div class="header-border">
@@ -48,7 +126,7 @@
                                 </span>
                             </button>
                         </div>
-                        <button class="header-navigation__burger-button burger-button">
+                        <button class="header-navigation__burger-button button burger-button">
                             <span class="burger-button__span"></span>
                         </button>
                     </nav>
@@ -62,12 +140,12 @@
                                 <button class="search-block__search-button button search-button">
                                     <svg class="search-button__icon">
                                         <use xlink:href="img/icons/icons.svg#Search"></use>
-                                    </svg>
+                                    </svg>     
                                 </button>
                             </div>
                             <a href="#" class="search-block__random-link random-link link" id="random-link">
-                                <svg class="random-link__icon">
-                                    <use xlink:href="img/icons/icons.svg#Random"></use>
+                                <svg class="random-link__icon" width="19" height="15" viewBox="0 0 19 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M17.164 2.01477L14.9264 0.513409L15.4531 0L19 2.38432L15.4563 4.77273L14.9296 4.25932L17.2598 2.69659H13.9633C11.1538 2.72591 9.84296 5.01818 8.48774 7.485C9.84296 9.95114 11.1538 12.2434 13.9633 12.2727H17.2099L14.9264 10.7407L15.4531 10.2273L19 12.6116L15.4563 15L14.9296 14.4866L17.2139 12.9545H13.9585C10.8726 12.9218 9.37723 10.6575 8.04894 8.27864C6.71273 10.6718 5.20385 12.9436 2.07758 12.9545H0V12.2727H2.076C4.92742 12.2632 6.24858 9.96341 7.61093 7.485C6.24858 5.00591 4.92742 2.70614 2.076 2.69659H0V2.01477H2.07758C5.20385 2.02568 6.71273 4.2975 8.04894 6.69068C9.37723 4.31182 10.8726 2.0475 13.9585 2.01477H17.164Z" fill="#F68888"/>
                                 </svg>
                                 Случайное слово
                             </a>
