@@ -163,13 +163,11 @@ html, body {
 }
 
 .modal-background {
-  width: 100%;
-  min-width: 340px;
-  max-width: 500px;
+  width: calc(340px + 160 * (100vw - 320px) / 1600);
   height: calc(400px + 220 * (100vw - 320px) / 1600);
   background-color: transparent;
   perspective: 1000px;
-  transition: width 2s ease;
+  transition: width 0.35s ease;
 }
 .modal-background.reg {
   animation: regHeight 0.4s steps(6, end) forwards;
