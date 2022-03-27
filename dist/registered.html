@@ -8,8 +8,77 @@
     <title>English Cards</title>
 </head>
     <body>
+        
         <div class="wrapper container">
-            
+            <header class="header">
+    <div class="header-border">
+        <nav class="header-navigation">
+            <a href="index.html" class="header-navigation__logo-block logo-block logo-link">
+                <img src="img/Logo.svg" alt="Logo" class="logo-block__logo">
+                <p class="logo-block__logo-typography">
+                    English Cards
+                </p>
+            </a>
+            <ul class="header-navigation__header-links header-links">
+                <li class="header-links__header-link header-link">
+                    <a href="#about" class="header-link__link link">
+                        О нас
+                    </a>
+                </li>
+                <li class="header-links__header-link header-link">
+                    <a href="#dict" class="header-link__link link">
+                        Словарь
+                    </a>
+                </li>
+                <li class="header-links__header-link header-link">
+                    <a href="#test" class="header-link__link link">
+                        Тестирование
+                    </a>
+                </li>
+            </ul>
+            <div class="header-navigation__buttons-block buttons-block">
+                <button class="buttons-block__button button" id="persaccount-button">
+                    <svg class="button-icon" width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                            <path fill="none" d="M0 0h24v24H0z"/>
+                            <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-4.987-3.744A7.966 7.966 0 0 0 12 20c1.97 0 3.773-.712 5.167-1.892A6.979 6.979 0 0 0 12.16 16a6.981 6.981 0 0 0-5.147 2.256zM5.616 16.82A8.975 8.975 0 0 1 12.16 14a8.972 8.972 0 0 1 6.362 2.634 8 8 0 1 0-12.906.187zM12 13a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0-2a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/>
+                        </g>
+                    </svg>
+                    <span class="button-span"></span>
+                </button>
+                <button class="buttons-block__button button" id="logout-button">
+                    <span class="button-span">
+                        Выйти
+                    </span>
+                </button>
+            </div>
+            <button class="header-navigation__burger-button button burger-button">
+                <span class="burger-button__span"></span>
+            </button>
+        </nav>
+        <div class="header-main">
+            <h1 class="header-main__title header-title">
+                Поможем выучить английские слова быстро и доступно
+            </h1>
+            <div class="header-main__search-block search-block">
+                <div class="search-block__search-bar header-search">
+                    <input type="text" class="search-block__search-input header-input" id="search-input" placeholder="введите интересующее слово...">
+                    <button class="search-block__search-button button search-button">
+                        <svg class="search-button__icon">
+                            <use xlink:href="img/icons/icons.svg#Search"></use>
+                        </svg>     
+                    </button>
+                </div>
+                <a href="#" class="search-block__random-link random-link link" id="random-link">
+                    <svg class="random-link__icon" width="19" height="15" viewBox="0 0 19 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M17.164 2.01477L14.9264 0.513409L15.4531 0L19 2.38432L15.4563 4.77273L14.9296 4.25932L17.2598 2.69659H13.9633C11.1538 2.72591 9.84296 5.01818 8.48774 7.485C9.84296 9.95114 11.1538 12.2434 13.9633 12.2727H17.2099L14.9264 10.7407L15.4531 10.2273L19 12.6116L15.4563 15L14.9296 14.4866L17.2139 12.9545H13.9585C10.8726 12.9218 9.37723 10.6575 8.04894 8.27864C6.71273 10.6718 5.20385 12.9436 2.07758 12.9545H0V12.2727H2.076C4.92742 12.2632 6.24858 9.96341 7.61093 7.485C6.24858 5.00591 4.92742 2.70614 2.076 2.69659H0V2.01477H2.07758C5.20385 2.02568 6.71273 4.2975 8.04894 6.69068C9.37723 4.31182 10.8726 2.0475 13.9585 2.01477H17.164Z" fill="#F68888"/>
+                    </svg>
+                    Случайное слово
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
             
             
         </div>
