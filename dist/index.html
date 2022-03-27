@@ -10,89 +10,89 @@
     <body>
         
         <section class="modal-window">
-    <div class="modal-background">
-        <div class="modal-inner">
-            <div class="modal-window__body modal modal-registration">
-                <div class="modal__controls-block controls-block">
-                    <div class="controls-block__titles modal-titles">
-                        <h1 class="modal-titles__title modal-title">
-                            Создание нового аккаунта
-                        </h1>
-                        <button class="modal-titles__button titles-button" id="close-modal"></button>
+            <div class="modal-background">
+                <div class="modal-inner">
+                    <div class="modal-window__body modal modal-registration">
+                        <div class="modal__controls-block controls-block">
+                            <div class="controls-block__titles modal-titles">
+                                <h1 class="modal-titles__title modal-title">
+                                    Создание нового аккаунта
+                                </h1>
+                                <button class="modal-titles__button titles-button" id="close-modal"></button>
+                            </div>
+                            <div class="controls-block__hint-block hint-block">
+                                <p class="hint-block__hint">
+                                    Есть аккаунт?
+                                </p>
+                                <a href="#" class="hint-block__link" id="hint-auth">
+                                    Войти
+                                </a>
+                            </div>
+                        </div>
+                        <form class="modal__form" id="registration-form">
+                            <label class="modal__form-label">
+                                <span>Фамилия</span>
+                                <input type="text" class="modal__form-input" name="surname" id="surname-input" placeholder="Введите фамилию..." onpaste="return false;" required>
+                            </label>
+                            <label class="modal__form-label">
+                                <span>Имя</span>
+                                <input type="text" class="modal__form-input" name="name" id="name-input" placeholder="Введите имя..." onpaste="return false;" required>
+                            </label>
+                            <label class="modal__form-label">
+                                <span>Email</span>
+                                <input type="email" class="modal__form-input" name="email" id="email-input" placeholder="Введите электронный адрес..." required>
+                            </label>
+                            <label class="modal__form-label">
+                                <span>Пароль</span>
+                                <input type="password" class="modal__form-input" name="password" id="password-input" placeholder="Введите пароль..." onpaste="return false;" required>
+                            </label>
+                            <div class="modal__agreement-block">
+                                <input type="checkbox" id="agreement" class="modal__agreement-input" required>
+                                <label for="agreement" class="modal__agreement-label">
+                                    Я соглашаюсь c <a href="https://useragreement.tiiny.site/" target="_blank" class="modal__agreement-link">условиями пользования</a><span>и</span><a href="https://useragreement.tiiny.site/" target="_blank" class="modal__agreement-link">политикой конфиденциальности</a>
+                                </label>
+                            </div>
+                            <input type="submit" class="modal__button button" id="submit-button" value="Зарегистрироваться">
+                        </form>
                     </div>
-                    <div class="controls-block__hint-block hint-block">
-                        <p class="hint-block__hint">
-                            Есть аккаунт?
-                        </p>
-                        <a href="#" class="hint-block__link" id="hint-auth">
-                            Войти
-                        </a>
+                    <div class="modal-window__body modal modal-authorization">
+                        <div class="modal__controls-block controls-block">
+                            <div class="controls-block__titles modal-titles">
+                                <h1 class="modal-titles__title modal-title">
+                                    Авторизация
+                                </h1>
+                                <button class="modal-titles__button titles-button" id="close-modal"></button>
+                            </div>
+                            <div class="controls-block__hint-block hint-block">
+                                <p class="hint-block__hint">
+                                    Нет аккаунта?
+                                </p>
+                                <a href="#" class="hint-block__link" id="hint-registr">
+                                    Зарегистрироваться
+                                </a>
+                            </div>
+                        </div>
+                        <form class="modal__form" id="authorization-form">
+                            <label class="modal__form-label">
+                                <span>Email</span>
+                                <input type="email" class="modal__form-input" name="email" id="email-input" placeholder="Введите электронный адрес..." onpaste="return false;" required>
+                            </label>
+                            <label class="modal__form-label">
+                                <span>Пароль</span>
+                                <input type="password" class="modal__form-input" name="password" id="password-input" placeholder="Введите пароль..." onpaste="return false;" required>
+                            </label>
+                            <div class="modal__agreement-block">
+                                <input type="checkbox" id="entering" class="modal__agreement-input" name="checkbox" required>
+                                <label for="entering" class="modal__agreement-label entering-label">
+                                    <span>Запомнить вход</span>
+                                </label>
+                            </div>
+                            <input type="submit" class="modal__button button" id="submit-button" value="Войти">
+                        </form>
                     </div>
                 </div>
-                <form action="" method="post" class="modal__form" id="registration-form">
-                    <label class="modal__form-label">
-                        Фамилия
-                        <input type="text" class="modal__form-input" name="surname" id="surname-input" placeholder="Введите фамилию..." autocomplete="off">
-                    </label>
-                    <label class="modal__form-label">
-                        Имя
-                        <input type="text" class="modal__form-input" name="name" id="name-input" placeholder="Введите имя...">
-                    </label>
-                    <label class="modal__form-label">
-                        Email
-                        <input type="email" class="modal__form-input" name="email" id="email-input" placeholder="Введите электронный адрес...">
-                    </label>
-                    <label class="modal__form-label">
-                        Пароль
-                        <input type="password" class="modal__form-input" name="password" id="password-input" placeholder="Введите пароль...">
-                    </label>
-                    <div class="modal__agreement-block">
-                        <input type="checkbox" id="agreement" class="modal__agreement-input" name="checkbox">
-                        <label for="agreement" class="modal__agreement-label">
-                            Я соглашаюсь c <a href="https://useragreement.tiiny.site/" target="_blank" class="modal__agreement-link">условиями пользования</a><span>и</span><a href="https://useragreement.tiiny.site/" target="_blank" class="modal__agreement-link">политикой конфиденциальности</a>
-                        </label>
-                    </div>
-                    <input type="submit" class="modal__button button" id="submit-button" value="Зарегистрироваться">
-                </form>
             </div>
-            <div class="modal-window__body modal modal-authorization">
-                <div class="modal__controls-block controls-block">
-                    <div class="controls-block__titles modal-titles">
-                        <h1 class="modal-titles__title modal-title">
-                            Авторизация
-                        </h1>
-                        <button class="modal-titles__button titles-button" id="close-modal"></button>
-                    </div>
-                    <div class="controls-block__hint-block hint-block">
-                        <p class="hint-block__hint">
-                            Нет аккаунта?
-                        </p>
-                        <a href="#" class="hint-block__link" id="hint-registr">
-                            Зарегистрироваться
-                        </a>
-                    </div>
-                </div>
-                <form action="" method="post" class="modal__form" id="authorization-form">
-                    <label class="modal__form-label">
-                        Email
-                        <input type="email" class="modal__form-input" name="email" id="email-input" placeholder="Введите электронный адрес...">
-                    </label>
-                    <label class="modal__form-label">
-                        Пароль
-                        <input type="password" class="modal__form-input" name="password" id="password-input" placeholder="Введите пароль...">
-                    </label>
-                    <div class="modal__agreement-block">
-                        <input type="checkbox" id="entering" class="modal__agreement-input" name="checkbox">
-                        <label for="entering" class="modal__agreement-label entering-label">
-                            <span>Запомнить вход</span>
-                        </label>
-                    </div>
-                    <input type="submit" class="modal__button button" id="submit-button" value="Войти">
-                </form>
-            </div>
-        </div>
-    </div>
-</section>
+        </section>
         <div class="wrapper container">
             <header class="header">
                 <div class="header-border">

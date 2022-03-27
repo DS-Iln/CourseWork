@@ -265,8 +265,15 @@ html, body {
   background-color: #fff;
   font-weight: 400;
   font-size: calc(12px + (14 - 12) * ((100vw - 320px) / (1920 - 320)));
-  line-height: calc(18px + (23 - 18) * ((100vw - 320px) / (1920 - 320)));
+  line-height: calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320)));
   color: #666666;
+}
+.modal__form-label.error {
+  color: #D02424;
+  box-shadow: 0px 17px 5px rgba(208, 36, 36, 0.01), 0px 11px 4px rgba(208, 36, 36, 0.04), 0px 6px 4px rgba(208, 36, 36, 0.15), 0px 3px 3px rgba(208, 36, 36, 0.26), 0px 1px 1px rgba(208, 36, 36, 0.29), 0px 0px 0px rgba(208, 36, 36, 0.3);
+}
+.modal__form-label.focus {
+  box-shadow: inset 0px 10px 4px rgba(0, 0, 0, 0.03), inset 0px 6px 3px rgba(0, 0, 0, 0.09), inset 0px 2px 2px rgba(0, 0, 0, 0.15), inset 0px 1px 1px rgba(0, 0, 0, 0.18);
 }
 .modal__form-label:hover, .modal__form-label:hover > .modal__form-input {
   background-color: #eeeeee;
@@ -363,9 +370,18 @@ html, body {
   font-size: calc(14px + (20 - 14) * ((100vw - 320px) / (1920 - 320)));
   line-height: calc(18px + (24 - 18) * ((100vw - 320px) / (1920 - 320)));
   color: #fff;
+  transition: all 0.35s ease;
 }
 .modal__button:hover, .modal__button:focus {
   background-color: #5AB487;
+}
+.modal__button.success {
+  background-color: #2eca43;
+  animation: success 0.5s linear forwards;
+}
+.modal__button.failed {
+  background-color: #D02424;
+  animation: failed 0.5s linear forwards;
 }
 .modal-authorization {
   transform: translate(-50%, -50%) rotateY(180deg);
@@ -505,6 +521,8 @@ html, body {
   letter-spacing: -0.02em;
   color: #F25959;
   text-align: center;
+  opacity: 0;
+  animation: maintitleAppearing 0.45s linear forwards;
 }
 .header-main__search-block {
   width: 100%;
@@ -772,5 +790,30 @@ html, body {
   }
   100% {
     transform: rotateY(180deg);
+  }
+}
+@keyframes maintitleAppearing {
+  0% {
+    transform: translateY(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes success {
+  0% {
+    align-items: end;
+  }
+  100% {
+    align-items: center;
+  }
+}
+@keyframes success {
+  0% {
+    align-items: start;
+  }
+  100% {
+    align-items: center;
   }
 }
