@@ -32,11 +32,11 @@
                         <form class="modal__form" id="registration-form">
                             <label class="modal__form-label">
                                 <span>Фамилия</span>
-                                <input type="text" class="modal__form-input" name="surname" id="surname-input" placeholder="Введите фамилию..." onpaste="return false;" required>
+                                <input type="text" class="modal__form-input" name="surname" id="surname-input" placeholder="Введите фамилию..." onpaste="() => {return false;}" required>
                             </label>
                             <label class="modal__form-label">
                                 <span>Имя</span>
-                                <input type="text" class="modal__form-input" name="name" id="name-input" placeholder="Введите имя..." onpaste="return false;" required>
+                                <input type="text" class="modal__form-input" name="name" id="name-input" placeholder="Введите имя..." onpaste="() => {return false;}" required>
                             </label>
                             <label class="modal__form-label">
                                 <span>Email</span>
@@ -44,7 +44,7 @@
                             </label>
                             <label class="modal__form-label">
                                 <span>Пароль</span>
-                                <input type="password" class="modal__form-input" name="password" id="password-input" placeholder="Введите пароль..." onpaste="return false;" required>
+                                <input type="password" class="modal__form-input" name="password" id="password-input" placeholder="Введите пароль..." onpaste="() => {return false;}" required>
                             </label>
                             <div class="modal__agreement-block">
                                 <input type="checkbox" id="agreement" class="modal__agreement-input" required>
@@ -75,14 +75,14 @@
                         <form class="modal__form" id="authorization-form">
                             <label class="modal__form-label">
                                 <span>Email</span>
-                                <input type="email" class="modal__form-input" name="email" id="email-input" placeholder="Введите электронный адрес..." onpaste="return false;" required>
+                                <input type="email" class="modal__form-input" name="email" id="email-input" placeholder="Введите электронный адрес..." onpaste="() => {return false;}" required>
                             </label>
                             <label class="modal__form-label">
                                 <span>Пароль</span>
-                                <input type="password" class="modal__form-input" name="password" id="password-input" placeholder="Введите пароль..." onpaste="return false;" required>
+                                <input type="password" class="modal__form-input" name="password" id="password-input" placeholder="Введите пароль..." onpaste="() => {return false;}" required>
                             </label>
                             <div class="modal__agreement-block">
-                                <input type="checkbox" id="entering" class="modal__agreement-input" name="checkbox" required>
+                                <input type="checkbox" id="entering" class="modal__agreement-input" name="checkbox">
                                 <label for="entering" class="modal__agreement-label entering-label">
                                     <span>Запомнить вход</span>
                                 </label>

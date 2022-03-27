@@ -634,11 +634,13 @@ html, body {
   border-radius: 50px;
   transition: background-color 0.35s ease, color 0.35s ease, transform 0.2s ease;
 }
+.buttons-block__button:first-child {
+  margin: 0 10px 0 0;
+}
 .buttons-block__button:focus {
   transform: translateY(2px);
 }
-.buttons-block #auth-button {
-  margin: 0 10px 0 0;
+.buttons-block #auth-button, .buttons-block #logout-button {
   padding-top: calc(5px + (12 - 5) * ((100vw - 320px) / (1920 - 320)));
   padding-right: calc(25px + (35 - 25) * ((100vw - 320px) / (1920 - 320)));
   padding-bottom: calc(4px + (13 - 4) * ((100vw - 320px) / (1920 - 320)));
@@ -647,11 +649,11 @@ html, body {
   border: 1px solid #F25959;
   color: #F25959;
 }
-.buttons-block #auth-button:hover, .buttons-block #auth-button:focus {
+.buttons-block #auth-button:hover, .buttons-block #logout-button:hover, .buttons-block #auth-button:focus, .buttons-block #logout-button:focus {
   border: 1px solid #B74E4E;
   color: #B74E4E;
 }
-.buttons-block #registr-button {
+.buttons-block #registr-button, .buttons-block #persaccount-button {
   padding-top: calc(5px + (12 - 5) * ((100vw - 320px) / (1920 - 320)));
   padding-right: calc(25px + (29 - 25) * ((100vw - 320px) / (1920 - 320)));
   padding-bottom: calc(4px + (13 - 4) * ((100vw - 320px) / (1920 - 320)));
@@ -659,8 +661,12 @@ html, body {
   background-color: #88F6BF;
   color: #0C482A;
 }
-.buttons-block #registr-button:hover, .buttons-block #registr-button:focus {
+.buttons-block #registr-button:hover, .buttons-block #persaccount-button:hover, .buttons-block #registr-button:focus, .buttons-block #persaccount-button:focus {
   background-color: #49D38E;
+}
+.buttons-block #persaccount-button svg {
+  margin: 0 8px 0 0;
+  fill: #0C482A;
 }
 
 .burger-button {
