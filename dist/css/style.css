@@ -169,7 +169,7 @@ html, body {
   transition: width 0.35s ease;
 }
 .modal-background.reg {
-  animation: regHeight 0.4s steps(6, end) forwards;
+  animation: regHeight 0.4s steps(10, end) forwards;
 }
 .modal-background.auth {
   animation: authHeight 0.4s ease-in-out 0.6s forwards;
