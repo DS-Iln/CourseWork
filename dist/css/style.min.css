@@ -929,14 +929,15 @@ html, body {
   margin: 0 auto;
   width: calc(268.61px + (1100 - 268.61) * ((100vw - 320px) / (1920 - 320)));
   background-image: linear-gradient(160deg, white 0%, rgba(252, 229, 229, 0.4) 150%);
+  border-radius: 2px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(auto, 250px));
   gap: 25px 28px;
   max-height: 941px;
   overflow-x: hidden;
   overflow-y: auto;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   padding-right: calc(10px + (5 - 10) * ((100vw - 320px) / (1920 - 320)));
   padding-left: calc(10px + (5 - 10) * ((100vw - 320px) / (1920 - 320)));
 }
@@ -949,14 +950,72 @@ html, body {
 }
 
 .cards-items__card-item {
-  max-height: 374px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  height: 100vh;
+  max-height: calc(351.73px + (374 - 351.73) * ((100vw - 320px) / (1920 - 320)));
   background-color: #FFFFFF;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+  padding: 15px 15px 0 15px;
   border-radius: 10px;
+  transition: all 0.35s ease;
+}
+.cards-items__card-item:hover {
+  box-shadow: 0px 24px 32px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
 }
 
+.card-item {
+  position: relative;
+}
+.card-item.reged > .card-item__title {
+  align-self: start;
+  margin: 0 0 15px 26px;
+}
+.card-item.reged > .card-item__save-icon {
+  display: block;
+}
 .card-item__save-icon {
+  position: absolute;
+  top: -4px;
+  right: 10px;
   display: none;
+  width: 31px;
+  height: 38px;
+  transition: all 0.35s ease;
+}
+.card-item__save-icon > path {
+  transition: all 0.35s ease;
+}
+.card-item__save-icon:hover > path {
+  stroke: #F68888;
+  filter: drop-shadow(0px 0px 8px #F68888);
+}
+.card-item__save-icon.active > path {
+  fill: #59F2A6;
+  stroke: #49D38E;
+}
+.card-item__title {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 153px;
+  margin: 0 0 15px 0;
+  font-family: Montserrat;
+  font-weight: 500;
+  font-size: calc(24px + (26 - 24) * ((100vw - 320px) / (1920 - 320)));
+  line-height: calc(28px + (32 - 28) * ((100vw - 320px) / (1920 - 320)));
+  letter-spacing: -0.02em;
+  color: #F25959;
+}
+.card-item__separator {
+  margin: 0 0 15px 0;
+}
+.card-item__definition {
+  max-height: 240px;
+  font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
+  line-height: calc(20px + (24 - 20) * ((100vw - 320px) / (1920 - 320)));
+  color: #4E3636;
 }
 .filters {
   display: flex;
