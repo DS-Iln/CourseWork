@@ -917,7 +917,7 @@ html, body {
 }
 
 .dict__filtering-block {
-  margin-bottom: calc(15px + (40 - 15) * ((100vw - 320px) / (1920 - 320)));
+  margin-bottom: calc(15px + (35 - 15) * ((100vw - 320px) / (1920 - 320)));
   background-color: #FCF0F0;
   border-radius: 4px;
   padding-top: 15px;
@@ -926,16 +926,38 @@ html, body {
   padding-left: calc(42px + (20 - 42) * ((100vw - 320px) / (1920 - 320)));
 }
 .dict__cards-items {
+  margin: 0 auto;
+  width: calc(268.61px + (1100 - 268.61) * ((100vw - 320px) / (1920 - 320)));
+  background-image: linear-gradient(160deg, white 0%, rgba(252, 229, 229, 0.4) 150%);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(auto, 250px));
-  gap: 30px 25px;
-  height: 100vh;
+  gap: 25px 28px;
   max-height: 941px;
-  overflow-y: scroll;
+  overflow-x: hidden;
+  overflow-y: auto;
   padding-top: 10px;
   padding-bottom: 10px;
+  padding-right: calc(10px + (5 - 10) * ((100vw - 320px) / (1920 - 320)));
+  padding-left: calc(10px + (5 - 10) * ((100vw - 320px) / (1920 - 320)));
+}
+.dict__cards-items::-webkit-scrollbar {
+  width: 6px;
+}
+.dict__cards-items::-webkit-scrollbar-thumb {
+  background-color: #A7A7A7;
+  border-radius: 4px;
 }
 
+.cards-items__card-item {
+  max-height: 374px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+  border-radius: 10px;
+}
+
+.card-item__save-icon {
+  display: none;
+}
 .filters {
   display: flex;
   flex-direction: row;
@@ -1259,8 +1281,21 @@ html, body {
   .filters {
     justify-content: start;
   }
+
   .filters-filter {
     margin: 0 26px 0 0;
+  }
+}
+@media (max-width: 952px) {
+  .dict__filtering-block {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+  }
+
+  .filter-block__filters {
+    max-width: 700px;
+    justify-content: center;
   }
 }
 @media (max-width: 840px) {
@@ -1281,14 +1316,7 @@ html, body {
     background: 25% 18%/90% url("../img/header background.png") no-repeat, linear-gradient(180deg, rgba(244, 205, 205, 0.1) 30.87%, rgba(136, 246, 191, 0) 100%, #FFFFFF);
   }
 }
-@media (max-width: 608px) {
-  .dict__filtering-block {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: start;
-  }
-
+@media (max-width: 611px) {
   .filter-block__filters {
     max-width: 300px;
     flex-direction: column;
