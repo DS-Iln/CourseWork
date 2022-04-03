@@ -954,15 +954,16 @@ html, body {
   flex-direction: column;
   justify-content: start;
   align-items: center;
+  background-color: #FFFFFF;
   height: 100vh;
   max-height: calc(351.73px + (374 - 351.73) * ((100vw - 320px) / (1920 - 320)));
-  background-color: #FFFFFF;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
   padding: 15px 15px 0 15px;
   border-radius: 10px;
   transition: all 0.35s ease;
 }
 .cards-items__card-item:hover {
+  transform: perspective(750px);
   box-shadow: 0px 24px 32px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
 }
 
@@ -975,6 +976,15 @@ html, body {
 }
 .card-item.reged > .card-item__save-icon {
   display: block;
+}
+.card-item.deployed {
+  height: fit-content;
+  max-height: none;
+}
+.card-item.deployed .card-item__definition {
+  -ms-line-clamp: unset;
+  -webkit-line-clamp: unset;
+  line-clamp: unset;
 }
 .card-item__save-icon {
   position: absolute;
@@ -1012,11 +1022,23 @@ html, body {
   margin: 0 0 15px 0;
 }
 .card-item__definition {
-  max-height: 240px;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -ms-line-clamp: 10;
+  -webkit-line-clamp: 10;
+  line-clamp: 10;
+  display: -webkit-box;
+  display: box;
+  word-wrap: break-word;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
   font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
   line-height: calc(20px + (24 - 20) * ((100vw - 320px) / (1920 - 320)));
   color: #4E3636;
 }
+
 .filters {
   display: flex;
   flex-direction: row;
