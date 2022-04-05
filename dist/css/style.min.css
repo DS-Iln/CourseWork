@@ -971,6 +971,7 @@ html, body {
   animation: card-collapsed 1s linear forwards;
 }
 .card-item.reged > .card-item__title {
+  font-size: calc(22px + (24 - 22) * ((100vw - 320px) / (1920 - 320)));
   max-width: 150px;
 }
 .card-item.deployed {
