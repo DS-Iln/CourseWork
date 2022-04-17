@@ -72,7 +72,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: inherit;
 }
 
-.content-block {
+.content-block:not(:first-child) {
   margin-top: calc(25px + (50 - 25) * ((100vw - 320px) / (1920 - 320)));
 }
 
@@ -852,8 +852,8 @@ html, body {
   flex-direction: column;
   justify-content: start;
   align-items: end;
-  padding-top: calc(25px + (55 - 25) * ((100vw - 320px) / (1920 - 320)));
-  padding-bottom: calc(25px + (55 - 25) * ((100vw - 320px) / (1920 - 320)));
+  padding-top: calc(25px + (40 - 25) * ((100vw - 320px) / (1920 - 320)));
+  padding-bottom: calc(25px + (45 - 25) * ((100vw - 320px) / (1920 - 320)));
   background-color: #EDF9F3;
 }
 .about-block__title {
