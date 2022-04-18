@@ -998,7 +998,6 @@ html, body {
   right: 10px;
   width: 31px;
   height: 38px;
-  z-index: 4;
   transition: all 0.35s ease;
   cursor: pointer;
 }
