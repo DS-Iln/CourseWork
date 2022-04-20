@@ -933,7 +933,6 @@ html, body {
 .dict__cards-items {
   min-height: 200px;
   margin: 0 auto;
-  width: calc(268.61px + (1100 - 268.61) * ((100vw - 320px) / (1920 - 320)));
   background-image: linear-gradient(160deg, white 0%, rgba(252, 229, 229, 0.4) 150%);
   border-radius: 2px;
   display: grid;
@@ -1252,6 +1251,10 @@ html, body {
   text-align: center;
 }
 
+[list]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
 .footer {
   background-color: #DF7E7E;
   padding-top: calc(20px + (40 - 20) * ((100vw - 320px) / (1920 - 320)));
@@ -1490,6 +1493,10 @@ html, body {
     -ms-line-clamp: 32;
     -webkit-line-clamp: 32;
     line-clamp: 32;
+  }
+
+  .dict__cards-items {
+    width: calc(268.61px + (1100 - 268.61) * ((100vw - 320px) / (1920 - 320)));
   }
 }
 @keyframes scaleUp {

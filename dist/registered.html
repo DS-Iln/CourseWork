@@ -109,7 +109,8 @@
                         </h1>
                         <div class="header-main__search-block search-block">
                             <div class="search-block__search-bar header-search">
-                                <input type="text" class="search-block__search-input header-input" id="search-input" placeholder="введите интересующее слово...">
+                                <input type="text" list="words1" class="search-block__search-input header-input" id="search-input" placeholder="введите интересующее слово...">
+                                <datalist id="words1"></datalist>
                                 <button class="search-block__search-button button search-button">
                                     <svg class="search-button__icon">
                                         <use xlink:href="img/icons/icons.svg#Search"></use>
@@ -249,7 +250,8 @@
                                         <input type="number" class="filters-input">
                                     </div>
                                 </div>
-                                <input type="text" class="filters-search" placeholder="введите интересующее слово...">
+                                <input type="text" list="words2" class="filters-search" id="search-input" placeholder="введите интересующее слово...">
+                                <datalist id="words2" minlength="2"></datalist>
                                 <a href="#" class="filters-button button">
                                     <span class="button-span">
                                         Найти
