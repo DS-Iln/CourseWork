@@ -100,35 +100,35 @@ h1, h2, h3, h4, h5, h6 {
 @font-face {
   font-family: "MarckScript";
   font-display: swap;
-  src: url("../dist/fonts/MarckScript-Regular.woff") format("woff"), url("../fonts/MarckScript-Regular.woff2") format("woff2");
+  src: url("../fonts/MarckScript-Regular.woff") format("woff"), url("../fonts/MarckScript-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Montserrat";
   font-display: swap;
-  src: url("../dist/fonts/Montserrat-Bold.woff") format("woff"), url("../fonts/Montserrat-Bold.woff2") format("woff2");
+  src: url("../fonts/Montserrat-Bold.woff") format("woff"), url("../fonts/Montserrat-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: "Montserrat";
   font-display: swap;
-  src: url("../dist/fonts/Montserrat-Semibold.woff") format("woff"), url("../fonts/Montserrat-Semibold.woff2") format("woff2");
+  src: url("../fonts/Montserrat-Semibold.woff") format("woff"), url("../fonts/Montserrat-Semibold.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
 }
 @font-face {
   font-family: "Montserrat";
   font-display: swap;
-  src: url("../dist/fonts/Montserrat-Medium.woff") format("woff"), url("../fonts/Montserrat-Medium.woff2") format("woff2");
+  src: url("../fonts/Montserrat-Medium.woff") format("woff"), url("../fonts/Montserrat-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: "Montserrat";
   font-display: swap;
-  src: url("../dist/fonts/Montserrat-Regular.woff") format("woff"), url("../fonts/Montserrat-Regular.woff2") format("woff2");
+  src: url("../fonts/Montserrat-Regular.woff") format("woff"), url("../fonts/Montserrat-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
