@@ -590,7 +590,11 @@ html, body {
 .header {
   padding-top: calc(10px + (15 - 10) * ((100vw - 320px) / (1920 - 320)));
   height: calc(405px + (955 - 405) * ((100vw - 320px) / (1920 - 320)));
-  background: 25% 18%/90% url("../img/header background.png") no-repeat, linear-gradient(180deg, rgba(244, 205, 205, 0.1) 30.87%, rgba(136, 246, 191, 0) 100%, #FFFFFF);
+  background: 25% 18%/90% url("../img/header background.png") no-repeat;
+  animation: default-background 0.6s ease-out forwards;
+}
+.header.reduced {
+  animation: reduced-background 0.6s ease-out forwards;
 }
 .header-border {
   height: 100%;
@@ -635,7 +639,7 @@ html, body {
   color: #F25959;
   text-align: center;
   opacity: 0;
-  animation: maintitleAppearing 0.45s linear forwards;
+  animation: maintitleAppearing 0.45s ease-in-out forwards;
 }
 .header-main__search-block {
   width: 100%;
@@ -917,8 +921,8 @@ html, body {
 .dictionary-block__dict {
   width: 100%;
   margin-top: calc(15px + (35 - 15) * ((100vw - 320px) / (1920 - 320)));
-  padding-right: calc(0px + (35 - 0) * ((100vw - 320px) / (1920 - 320)));
-  padding-left: calc(0px + (35 - 0) * ((100vw - 320px) / (1920 - 320)));
+  padding-right: calc(-10px + (35 - -10) * ((100vw - 320px) / (1920 - 320)));
+  padding-left: calc(-10px + (35 - -10) * ((100vw - 320px) / (1920 - 320)));
 }
 
 .dict__filtering-block {
@@ -1212,7 +1216,7 @@ html, body {
   font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
   line-height: calc(18px + (24 - 18) * ((100vw - 320px) / (1920 - 320)));
   color: #4E3636;
-  padding: 0px 8px;
+  padding: 2px 8px;
   cursor: pointer;
   user-select: none;
 }
@@ -1410,6 +1414,10 @@ html, body {
   .header {
     background: 45% 18%/70% url("../img/header background.png") no-repeat, linear-gradient(180deg, rgba(244, 205, 205, 0.1) 30.87%, rgba(136, 246, 191, 0) 100%, #FFFFFF);
   }
+
+  .dict__cards-items {
+    width: calc(268.61px + (1700 - 268.61) * ((100vw - 320px) / (1920 - 320)));
+  }
 }
 @media (max-width: 1080px) {
   .filters {
@@ -1493,10 +1501,6 @@ html, body {
     -ms-line-clamp: 32;
     -webkit-line-clamp: 32;
     line-clamp: 32;
-  }
-
-  .dict__cards-items {
-    width: calc(268.61px + (1100 - 268.61) * ((100vw - 320px) / (1920 - 320)));
   }
 }
 @keyframes scaleUp {
@@ -1590,5 +1594,23 @@ html, body {
   }
   100% {
     max-height: calc(351.73px + 15.27 * (100vw - 320px) / 1600);
+  }
+}
+@keyframes reduced-background {
+  0% {
+    background-position: 25% 18%;
+    background-size: 90%;
+  }
+  100% {
+    background-position: 25% 10px;
+  }
+}
+@keyframes default-background {
+  0% {
+    background-position: 25% 10px;
+  }
+  100% {
+    background-position: 25% 18%;
+    background-size: 90%;
   }
 }
