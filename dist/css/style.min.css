@@ -672,6 +672,7 @@ html, body {
   padding-right: calc(4px + (5 - 4) * ((100vw - 320px) / (1920 - 320)));
   padding-bottom: calc(3.9px + (5 - 3.9) * ((100vw - 320px) / (1920 - 320)));
   padding-left: calc(12px + (25 - 12) * ((100vw - 320px) / (1920 - 320)));
+  height: calc(31.75px + (52 - 31.75) * ((100vw - 320px) / (1920 - 320)));
   background-color: #FCF0F0;
   border-radius: 50px;
   transition: all 0.35s ease;
@@ -1421,7 +1422,7 @@ html, body {
 
 @media (max-width: 1350px) {
   .dict__cards-items {
-    width: calc(268.61px + (1700 - 268.61) * ((100vw - 320px) / (1920 - 320)));
+    width: calc(255px + (1700 - 255) * ((100vw - 320px) / (1920 - 320)));
   }
 }
 @media (max-width: 1080px) {
