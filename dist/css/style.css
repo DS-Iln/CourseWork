@@ -589,12 +589,26 @@ html, body {
 
 .header {
   padding-top: calc(10px + (15 - 10) * ((100vw - 320px) / (1920 - 320)));
-  height: calc(405px + (955 - 405) * ((100vw - 320px) / (1920 - 320)));
-  background: 25% 18%/90% url("../img/header background.png") no-repeat;
+  height: calc(405px + (970 - 405) * ((100vw - 320px) / (1920 - 320)));
+  background: calc(44% + -16 * (100vw - 320px) / 1600) 18%/calc(80% + 130 * (100vw - 320px) / 1600) url("../img/header background.png") no-repeat, linear-gradient(180deg, rgba(244, 205, 205, 0.1) 30.87%, rgba(136, 246, 191, 0) 100%, #FFFFFF);
+}
+.header.default {
   animation: default-background 0.6s ease-out forwards;
+}
+.header.default .header-main {
+  animation: default-search 0.6s ease-out forwards;
+}
+.header.default .header-main__title {
+  animation: maintitleAppearing 0.45s ease-in-out 0.3s forwards;
 }
 .header.reduced {
   animation: reduced-background 0.6s ease-out forwards;
+}
+.header.reduced .header-main__title {
+  animation: maintitleDissapearing 0.3s ease-in forwards;
+}
+.header.reduced .header-main {
+  animation: reduced-search 0.6s ease-out 0.15s forwards;
 }
 .header-border {
   height: 100%;
@@ -1405,16 +1419,7 @@ html, body {
   height: calc(110px + 54 * (100vw - 320px) / 1600);
 }
 
-@media (max-width: 1600px) {
-  .header {
-    background: 35% 18%/80% url("../img/header background.png") no-repeat, linear-gradient(180deg, rgba(244, 205, 205, 0.1) 30.87%, rgba(136, 246, 191, 0) 100%, #FFFFFF);
-  }
-}
 @media (max-width: 1350px) {
-  .header {
-    background: 45% 18%/70% url("../img/header background.png") no-repeat, linear-gradient(180deg, rgba(244, 205, 205, 0.1) 30.87%, rgba(136, 246, 191, 0) 100%, #FFFFFF);
-  }
-
   .dict__cards-items {
     width: calc(268.61px + (1700 - 268.61) * ((100vw - 320px) / (1920 - 320)));
   }
@@ -1458,10 +1463,16 @@ html, body {
     -webkit-line-clamp: 28;
     line-clamp: 28;
   }
-}
-@media (max-width: 650px) {
-  .header {
-    background: 25% 18%/90% url("../img/header background.png") no-repeat, linear-gradient(180deg, rgba(244, 205, 205, 0.1) 30.87%, rgba(136, 246, 191, 0) 100%, #FFFFFF);
+
+  @keyframes maintitleDissapearing {
+    0% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-5px);
+    }
   }
 }
 @media (max-width: 611px) {
@@ -1557,11 +1568,21 @@ html, body {
 }
 @keyframes maintitleAppearing {
   0% {
-    transform: translateY(-40px);
+    transform: translateY(-30px);
   }
   100% {
     opacity: 1;
-    transform: translateX(0px);
+    transform: translateY(0px);
+  }
+}
+@keyframes maintitleDissapearing {
+  0% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-30px);
   }
 }
 @keyframes success {
@@ -1598,19 +1619,39 @@ html, body {
 }
 @keyframes reduced-background {
   0% {
-    background-position: 25% 18%;
-    background-size: 90%;
+    background-position: calc(44% + -16 * (100vw - 320px) / 1600) 18%;
+    background-size: calc(80% + 130 * (100vw - 320px) / 1600);
   }
   100% {
-    background-position: 25% 10px;
+    background-position: calc(46% + -16 * (100vw - 320px) / 1600) calc(20px + -50 * (100vw - 320px) / 1600);
+    background-size: calc(65% + 110 * (100vw - 320px) / 1600);
+    height: calc(415px + (1000 - 415) * ((100vw - 320px) / (1920 - 320)));
+  }
+}
+@keyframes reduced-search {
+  0% {
+    margin-bottom: calc(35px + (70 - 35) * ((100vw - 320px) / (1920 - 320)));
+  }
+  100% {
+    margin-bottom: calc(205px + (458 - 205) * ((100vw - 320px) / (1920 - 320)));
+  }
+}
+@keyframes default-search {
+  0% {
+    margin-bottom: calc(205px + (458 - 205) * ((100vw - 320px) / (1920 - 320)));
+  }
+  100% {
+    margin-bottom: calc(35px + (70 - 35) * ((100vw - 320px) / (1920 - 320)));
   }
 }
 @keyframes default-background {
   0% {
-    background-position: 25% 10px;
+    background-position: calc(46% + -16 * (100vw - 320px) / 1600) calc(20px + -50 * (100vw - 320px) / 1600);
+    background-size: calc(65% + 110 * (100vw - 320px) / 1600);
   }
   100% {
-    background-position: 25% 18%;
-    background-size: 90%;
+    background-position: calc(44% + -16 * (100vw - 320px) / 1600) 18%;
+    background-size: calc(80% + 130 * (100vw - 320px) / 1600);
+    height: calc(405px + (970 - 405) * ((100vw - 320px) / (1920 - 320)));
   }
 }
