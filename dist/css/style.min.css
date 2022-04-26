@@ -371,7 +371,6 @@ html, body {
   padding-bottom: calc(9px + (15 - 9) * ((100vw - 320px) / (1920 - 320)));
   background-color: #49D38E;
   border-radius: 4px;
-  font-family: Montserrat;
   font-weight: 600;
   font-size: calc(14px + (20 - 14) * ((100vw - 320px) / (1920 - 320)));
   line-height: calc(18px + (24 - 18) * ((100vw - 320px) / (1920 - 320)));
