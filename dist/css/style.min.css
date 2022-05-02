@@ -595,6 +595,9 @@ html, body {
   height: calc(405px + (970 - 405) * ((100vw - 320px) / (1920 - 320)));
   background: calc(44% + -16 * (100vw - 320px) / 1600) 18%/calc(80% + 130 * (100vw - 320px) / 1600) url("../img/header background.png") no-repeat, linear-gradient(180deg, rgba(244, 205, 205, 0.1) 30.87%, rgba(136, 246, 191, 0) 100%, #FFFFFF);
 }
+.header.personal-page {
+  background: none;
+}
 .header.default {
   animation: default-background 0.6s ease-out forwards;
 }
@@ -1032,12 +1035,16 @@ html, body {
   transition: all 0.35s ease;
 }
 .card-item__save-icon:hover > path {
-  stroke: #F68888;
-  filter: drop-shadow(0px 0px 8px #F68888);
+  stroke: #49D38E;
+  filter: drop-shadow(0px 0px 8px #59F2A6);
 }
 .card-item__save-icon.active > path {
   fill: #59F2A6;
   stroke: #49D38E;
+}
+.card-item__save-icon.active:hover > path {
+  fill: #F68888;
+  filter: none;
 }
 .card-item__title {
   flex: 0 0 auto;
@@ -1296,8 +1303,12 @@ html, body {
   margin-bottom: calc(6px + (8 - 6) * ((100vw - 320px) / (1920 - 320)));
 }
 
-.skeleton-title, .skeleton-definition {
-  animation: skeleton-pulse 0.8s ease-in-out infinite alternate;
+.skeleton-title, .skeleton-definition:nth-child(odd) {
+  animation: skeleton-pulse 1s ease-in-out infinite alternate;
+}
+
+.skeleton-definition:nth-child(even) {
+  animation: skeleton-pulse 1s ease-in-out 0.05s infinite alternate;
 }
 
 .footer {
@@ -1684,7 +1695,7 @@ html, body {
 }
 @keyframes skeleton-pulse {
   0% {
-    background-color: #fff8f8;
+    background-color: snow;
   }
   100% {
     background-color: #FCF0F0;
