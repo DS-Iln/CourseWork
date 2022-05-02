@@ -1283,6 +1283,23 @@ html, body {
   opacity: 0;
 }
 
+.skeleton-title {
+  width: 130px;
+  border-radius: 2px;
+  height: calc(24px + (26 - 24) * ((100vw - 320px) / (1920 - 320)));
+  margin: 0 0 15px 0;
+}
+
+.skeleton-definition {
+  width: 100%;
+  height: calc(16px + (18 - 16) * ((100vw - 320px) / (1920 - 320)));
+  margin-bottom: calc(6px + (8 - 6) * ((100vw - 320px) / (1920 - 320)));
+}
+
+.skeleton-title, .skeleton-definition {
+  animation: skeleton-pulse 0.8s ease-in-out infinite alternate;
+}
+
 .footer {
   background-color: #DF7E7E;
   padding-top: calc(20px + (40 - 20) * ((100vw - 320px) / (1920 - 320)));
@@ -1663,5 +1680,13 @@ html, body {
     background-position: calc(44% + -16 * (100vw - 320px) / 1600) 18%;
     background-size: calc(80% + 130 * (100vw - 320px) / 1600);
     height: calc(405px + (970 - 405) * ((100vw - 320px) / (1920 - 320)));
+  }
+}
+@keyframes skeleton-pulse {
+  0% {
+    background-color: #fff8f8;
+  }
+  100% {
+    background-color: #FCF0F0;
   }
 }
