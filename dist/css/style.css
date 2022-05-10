@@ -1318,6 +1318,7 @@ html, body {
   padding-left: calc(14.75px + (35 - 14.75) * ((100vw - 320px) / (1920 - 320)));
   padding-right: calc(14.75px + (35 - 14.75) * ((100vw - 320px) / (1920 - 320)));
   margin-bottom: calc(25px + (40 - 25) * ((100vw - 320px) / (1920 - 320)));
+  position: relative;
 }
 .testing-block__title {
   color: #3D7B5C;
@@ -1339,7 +1340,42 @@ html, body {
   align-self: start;
 }
 .testing-block__tests {
+  width: 100%;
   margin-top: calc(15px + (25 - 15) * ((100vw - 320px) / (1920 - 320)));
+}
+
+.testblock-banner {
+  position: absolute;
+  height: calc(100% + 40px);
+  width: 100%;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.8) 15%, rgba(255, 255, 255, 0.35) 100%);
+  backdrop-filter: blur(1.5px);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.testblock-banner__warning-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.warning-block__title {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: calc(20px + (28 - 20) * ((100vw - 320px) / (1920 - 320)));
+  line-height: calc(28px + (22 - 28) * ((100vw - 320px) / (1920 - 320)));
+  color: #333333;
+  margin-bottom: calc(15px + (35 - 15) * ((100vw - 320px) / (1920 - 320)));
+  text-align: center;
+}
+.warning-block__buttons-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
 }
 
 .tests {
@@ -1403,15 +1439,20 @@ html, body {
 }
 .answers-block__answer-label > span {
   font-size: calc(11.9px + (16 - 11.9) * ((100vw - 320px) / (1920 - 320)));
-  line-height: calc(16px + (22 - 16) * ((100vw - 320px) / (1920 - 320)));
+  line-height: calc(18px + (26 - 18) * ((100vw - 320px) / (1920 - 320)));
   color: #1E4532;
+}
+.answers-block__answer-radio.correct + .answers-block__answer-label > span, .answers-block__answer-checkbox.correct + .answers-block__answer-label > span {
+  color: #49D38E;
+}
+.answers-block__answer-radio.incorrect + .answers-block__answer-label > span, .answers-block__answer-checkbox.incorrect + .answers-block__answer-label > span {
+  color: #F25959;
 }
 .answers-block__answer-radio + .answers-block__answer-label, .answers-block__answer-checkbox + .answers-block__answer-label {
   display: flex;
   flex-direction: row;
   justify-content: start;
   align-items: center;
-  user-select: none;
 }
 .answers-block__answer-radio + .answers-block__answer-label:not(:last-child), .answers-block__answer-checkbox + .answers-block__answer-label {
   margin-bottom: calc(10px + (24 - 10) * ((100vw - 320px) / (1920 - 320)));
@@ -1424,11 +1465,14 @@ html, body {
   flex: 0 0 auto;
   border: 1px solid #1E4532;
   margin-right: calc(12px + (15 - 12) * ((100vw - 320px) / (1920 - 320)));
-  margin-top: 2px;
+  margin-top: 5px;
   align-self: start;
 }
 .answers-block__answer-radio + .answers-block__answer-label::before {
   border-radius: 50%;
+}
+.answers-block__answer-radio:disabled + .answers-block__answer-label::before, .answers-block__answer-checkbox:disabled + .answers-block__answer-label::before {
+  background: #eeeeee;
 }
 .answers-block__answer-checkbox + .answers-block__answer-label::before {
   border-radius: 1px;
@@ -1437,23 +1481,35 @@ html, body {
   background: url("../img/radio-icon.svg") center no-repeat;
   background-size: calc(6px + 2 * (100vw - 320px) / 1600);
 }
+.answers-block__answer-radio:checked:disabled + .answers-block__answer-label::before {
+  background: url("../img/radio-icon.svg") center no-repeat, #eeeeee;
+  background-size: calc(6px + 2 * (100vw - 320px) / 1600);
+}
 .answers-block__answer-checkbox:checked + .answers-block__answer-label::before {
   background: url("../img/check-icon.svg") center no-repeat;
   background-size: calc(6px + 3 * (100vw - 320px) / 1600);
 }
-
-#skip-task {
-  background-color: #D1FFE8;
-  color: #4B9972;
+.answers-block__answer-checkbox:checked:disabled + .answers-block__answer-label::before {
+  background: url("../img/check-icon.svg") center no-repeat, #eeeeee;
+  background-size: calc(6px + 3 * (100vw - 320px) / 1600);
 }
 
-#continue-testing {
+#skip-task, #continue-testing {
   background-color: #88F6BF;
   color: #0C482A;
+  transition: all 0.35s ease;
+}
+#skip-task:hover, #skip-task:focus, #continue-testing:hover, #continue-testing:focus {
+  background-color: #49D38E;
 }
 
 #skip-task, #continue-testing {
   font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (1920 - 320)));
+}
+
+#skip-task:disabled, #continue-testing:disabled {
+  background-color: #D1FFE8;
+  color: #4B9972;
 }
 
 .footer {
