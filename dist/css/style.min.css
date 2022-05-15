@@ -1413,6 +1413,10 @@ html, body {
 .tests__button:first-child {
   margin-right: calc(10px + (25 - 10) * ((100vw - 320px) / (1920 - 320)));
 }
+.tests > .warning-block__title {
+  font-weight: normal;
+  margin: 0 auto;
+}
 
 .task-block__icon {
   width: calc(22px + (35 - 22) * ((100vw - 320px) / (1920 - 320)));
