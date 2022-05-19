@@ -687,7 +687,7 @@ html, body {
 }
 .header-main__search-block .search-block__search-input {
   width: 100%;
-  max-width: 220px;
+  max-width: 240px;
   margin: 0 15px 0 0;
   background-color: transparent;
   font-weight: 400;
@@ -1447,10 +1447,23 @@ html, body {
   color: #1E4532;
 }
 .answers-block__answer-radio.correct + .answers-block__answer-label > span, .answers-block__answer-checkbox.correct + .answers-block__answer-label > span {
+<<<<<<< Updated upstream
   color: #49D38E;
 }
 .answers-block__answer-radio.incorrect + .answers-block__answer-label > span, .answers-block__answer-checkbox.incorrect + .answers-block__answer-label > span {
   color: #F25959;
+=======
+  color: #49d38e !important;
+}
+.answers-block__answer-radio.discorrect + .answers-block__answer-label > span, .answers-block__answer-checkbox.discorrect + .answers-block__answer-label > span {
+  color: #75b694 !important;
+}
+.answers-block__answer-radio.incorrect + .answers-block__answer-label > span, .answers-block__answer-checkbox.incorrect + .answers-block__answer-label > span {
+  color: #F25959 !important;
+}
+.answers-block__answer-radio.disincorrect + .answers-block__answer-label > span, .answers-block__answer-checkbox.disincorrect + .answers-block__answer-label > span {
+  color: #c76868;
+>>>>>>> Stashed changes
 }
 .answers-block__answer-radio + .answers-block__answer-label, .answers-block__answer-checkbox + .answers-block__answer-label {
   display: flex;
@@ -1475,6 +1488,12 @@ html, body {
 .answers-block__answer-radio + .answers-block__answer-label::before {
   border-radius: 50%;
 }
+<<<<<<< Updated upstream
+=======
+.answers-block__answer-radio:disabled + .answers-block__answer-label > span, .answers-block__answer-checkbox:disabled + .answers-block__answer-label > span {
+  color: #797c7b;
+}
+>>>>>>> Stashed changes
 .answers-block__answer-radio:disabled + .answers-block__answer-label::before, .answers-block__answer-checkbox:disabled + .answers-block__answer-label::before {
   background: #eeeeee;
 }
