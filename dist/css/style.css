@@ -1604,6 +1604,90 @@ html, body {
   margin: 0 0 0 5px;
 }
 
+.information-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  margin-top: calc(25px + (50 - 25) * ((100vw - 320px) / (1920 - 320)));
+  padding-right: calc(14.75px + (35 - 14.75) * ((100vw - 320px) / (1920 - 320)));
+  padding-left: calc(14.75px + (35 - 14.75) * ((100vw - 320px) / (1920 - 320)));
+}
+.information-block__title {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: calc(20px + (28 - 20) * ((100vw - 320px) / (1920 - 320)));
+  line-height: calc(24px + (34 - 24) * ((100vw - 320px) / (1920 - 320)));
+  color: #333333;
+  margin-bottom: calc(15px + (35 - 15) * ((100vw - 320px) / (1920 - 320)));
+}
+.information-block__person-info {
+  margin-left: calc(0px + (75 - 0) * ((100vw - 320px) / (1920 - 320)));
+}
+
+.person-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
+.person-info > *:not(:last-child) {
+  margin-right: calc(20px + (60 - 20) * ((100vw - 320px) / (1920 - 320)));
+}
+.person-info__img {
+  width: calc(45px + (85 - 45) * ((100vw - 320px) / (1920 - 320)));
+  height: calc(45px + (85 - 45) * ((100vw - 320px) / (1920 - 320)));
+}
+.person-info__data-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+.person-info__points-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.data-block__user-names, .data-block__user-email {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+
+.user-names {
+  margin-bottom: calc(5px + (10 - 5) * ((100vw - 320px) / (1920 - 320)));
+}
+.user-names__template, .user-email__template {
+  font-size: calc(12px + (14 - 12) * ((100vw - 320px) / (1920 - 320)));
+  line-height: calc(16px + (18 - 16) * ((100vw - 320px) / (1920 - 320)));
+  color: #888888;
+  margin-bottom: calc(0px + (3 - 0) * ((100vw - 320px) / (1920 - 320)));
+}
+.user-names__user, .user-email__email {
+  font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320)));
+  line-height: calc(18px + (22 - 18) * ((100vw - 320px) / (1920 - 320)));
+  color: #333333;
+}
+
+.points-block {
+  color: #333333;
+}
+.points-block__img {
+  width: calc(24px + (40 - 24) * ((100vw - 320px) / (1920 - 320)));
+  height: calc(24px + (40 - 24) * ((100vw - 320px) / (1920 - 320)));
+  margin-bottom: calc(2px + (5 - 2) * ((100vw - 320px) / (1920 - 320)));
+}
+.points-block__points {
+  font-weight: 700;
+  font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
+  line-height: calc(20px + (26 - 20) * ((100vw - 320px) / (1920 - 320)));
+  color: #333333;
+}
+
 .main {
   flex: 1 1 auto;
 }
