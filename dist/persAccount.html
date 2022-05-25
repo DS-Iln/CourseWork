@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.min.css">
-    <title>English Cards - Личный кабинет</title>
+    <link rel="stylesheet" href="css/style.min.css?_v=20220525120314">
+    <title>Eng. Cards - Личный кабинет</title>
 </head>
     <body>
         <section class="menuburger-modal">
@@ -107,11 +107,11 @@
                         Личный кабинет
                     </h2>
                     <div class="information-block__person-info person-info">
-                        <img src="img/l51qbkmq78a0mtc1gbn3hbcn75.png" alt="#" class="person-info__img">
+                        <img src="img/user-svgrepo-com.svg" alt="#" class="person-info__img">
                         <div class="person-info__data-block data-block">
                             <div class="data-block__user-names user-names">
                                 <p class="user-names__template">
-                                    Имя, Фамилия
+                                    Фамилия, Имя
                                 </p>
                                 <p class="user-names__user">
 
@@ -133,6 +133,33 @@
                             
                             </span>
                         </div>
+                    </div>
+                </div>
+                <div class="sections-menu">
+                    <input type="radio" name="tab-btn" id="tab-btn-1" value="" class="sections-menu__input" checked>
+                    <label for="tab-btn-1" class="sections-menu__label">Сохраненные слова</label>
+                    <input type="radio" name="tab-btn" id="tab-btn-2" value="" class="sections-menu__input">
+                    <label for="tab-btn-2" class="sections-menu__label">Управление учетной записью</label>
+                    <input type="radio" name="tab-btn" id="tab-btn-3" value="" class="sections-menu__input">
+                    <label for="tab-btn-3" class="sections-menu__label">Прогресс обучения</label>
+                
+                    <div id="content-1" class="sections-menu__content">
+                        <h5 class="sections-menu__title">
+                            Сохраненные слова
+                        </h5>
+                        <div class="sections-menu__cards-items cards-items"></div>
+                    </div>
+                    <div id="content-2" class="sections-menu__content">
+                        <h5 class="sections-menu__title">
+                            Управление учетной записью пользователя
+                        </h5>
+                        <!-- Смена пароля, удаление учетной записи -->
+                    </div>
+                    <div id="content-3" class="sections-menu__content">
+                        <h5 class="sections-menu__title">
+                            Прогрессия обучения
+                        </h5>
+                        <!-- Вывод прогрессии -->
                     </div>
                 </div>
 </main>
@@ -185,6 +212,6 @@
                 </p>
             </footer>
         </div>
-        <script src="js/app.min.js"></script>
+        <script src="js/app.min.js?_v=20220525120314"></script>
     </body>
 </html>

@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.min.css">
-    <title>English Cards - Кабинет Админа</title>
+    <link rel="stylesheet" href="css/style.min.css?_v=20220525120314">
+    <title>EC - Кабинет Администратора</title>
 </head>
     <body>
         <section class="menuburger-modal">
@@ -101,7 +101,116 @@
         </nav>
     </div>
 </header>
-            
+            <main class="main">
+    <div class="content-block information-block">
+        <h2 class="information-block__title">
+            Личный кабинет
+        </h2>
+        <div class="information-block__person-info person-info">
+            <img src="img/admin.svg" alt="#" class="person-info__img">
+            <div class="person-info__data-block data-block">
+                <div class="data-block__user-names user-names">
+                    <p class="user-names__template">
+                        Фамилия, Имя
+                    </p>
+                    <p class="user-names__user">
+
+                    </p>
+                </div>
+                <div class="data-block__user-email user-email">
+                    <p class="user-email__template">
+                        Email
+                    </p>
+                    <p class="user-email__email">
+                
+                    </p>
+                </div>
+            </div>
+            <div class="person-info__points-block points-block">
+                <img src="img/star.svg" alt="#" class="points-block__img">
+                Баллов:
+                <span class="points-block__points">
+                
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="sections-menu">
+        <input type="radio" name="tab-btn" id="tab-btn-1" value="" class="sections-menu__input" checked>
+        <label for="tab-btn-1" class="sections-menu__label">Конфигурация контента</label>
+        <input type="radio" name="tab-btn" id="tab-btn-2" value="" class="sections-menu__input">
+        <label for="tab-btn-2" class="sections-menu__label">Управление учетной записью</label>
+        <input type="radio" name="tab-btn" id="tab-btn-3" value="" class="sections-menu__input" disabled>
+        <label for="tab-btn-3" class="sections-menu__label"></label>
+    
+        <div id="content-1" class="sections-menu__content">
+            <h5 class="sections-menu__title">
+                Конфигурация обучающего контента
+            </h5>
+            <div class="sections-menu__configuration-settings configuration-settings">
+                <form class="configuration-settings__tests-adding tests-adding">
+                    <h6 class="configuration-settings__main-title">
+                        Добавление заданий
+                    </h6>
+                    <label for="select-test-type" class="tests-adding__label configuration-settings__label">
+                        Тип задания
+                    </label>
+                    <select id="select-test-type" class="tests-adding__select configuration-settings__select" name="testType">
+                        <option value="radio" selected>Radio</option>
+                        <option value="checkbox">Checkbox</option>
+                    </select>
+                    <input type="text" placeholder="Слово" class="tests-adding__input configuration-settings__input" name="word">
+                    <div class="tests-adding__condition-block" id="type-radio">
+                        <p class="tests-adding__field-title configuration-settings__title">
+                            Верное значение
+                        </p>
+                        <input type="text" placeholder="Значение слова" class="tests-adding__input configuration-settings__input" name="answer">
+                        <p class="tests-adding__field-title configuration-settings__title">
+                            Неверные значения
+                        </p>
+                        <input type="text" placeholder="Значение слова" class="tests-adding__input configuration-settings__input" name="incorrectAnswers">
+                        <input type="text" placeholder="Значение слова" class="tests-adding__input configuration-settings__input" name="incorrectAnswers">
+                        <input type="text" placeholder="Значение слова" class="tests-adding__input configuration-settings__input" name="incorrectAnswers">
+                    </div>
+                    <div class="tests-adding__condition-block _hidden" id="type-checkbox">
+                        <p class="tests-adding__field-title configuration-settings__title">
+                            Верные значения
+                        </p>
+                        <input type="text" placeholder="Значение слова" class="tests-adding__input configuration-settings__input" name="answer" disabled>
+                        <input type="text" placeholder="Значение слова" class="tests-adding__input configuration-settings__input" name="answer" disabled>
+                        <p class="tests-adding__field-title configuration-settings__title">
+                            Неверные значения
+                        </p>
+                        <input type="text" placeholder="Значение слова" class="tests-adding__input configuration-settings__input" name="incorrectAnswers" disabled>
+                        <input type="text" placeholder="Значение слова" class="tests-adding__input configuration-settings__input" name="incorrectAnswers" disabled>
+                    </div>
+                    <button type="submit" class="tests-adding__button configuration-settings__button button">
+                        <span class="button-span">
+                            Добавить
+                        </span>
+                    </button>
+                </form>
+                <div class="configuration-settings__tests-removing">
+                    <h6 class="configuration-settings__main-title">
+                        Удаление заданий
+                    </h6>
+                    <input type="text" placeholder="Идентификатор задания" class="tests-removing__input configuration-settings__input">
+                    <button class="tests-removing__button configuration-settings__button button">
+                        <span class="button-span">
+                            Удалить
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="content-2" class="sections-menu__content">
+            <h5 class="sections-menu__title">
+                Управление учетной записью администратора   
+            </h5>
+            <!-- ... -->
+        </div>  
+    </div>
+</main>
             <footer class="footer">
                 <div class="footer-block">
                     <div class="footer-block__footer-navigation footer-navigation">
@@ -151,6 +260,6 @@
                 </p>
             </footer>
         </div>
-        <script src="js/app.min.js"></script>
+        <script src="js/app.min.js?_v=20220525120314"></script>
     </body>
 </html>
